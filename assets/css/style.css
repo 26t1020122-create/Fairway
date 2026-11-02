@@ -1,0 +1,377 @@
+
+/* RESET CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #292522;
+}
+
+/* BACKGROUND */
+.booking-container {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+
+    background: linear-gradient(
+        135deg,
+        #29231f 0%,
+        #302b28 50%,
+        #202522 100%
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+/* HEADER */
+.header {
+    position: absolute;
+    top: 28px;
+    right: 8.5%;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: #eeeeee;
+
+    font-size: 32px;
+    font-weight: 200;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    color: #d9b873;
+}
+
+/* BOOKING CONTENT */
+.booking-content {
+    width: 425px;
+    max-width: 100%;
+}
+
+/* TITLE */
+.booking-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 38px;
+    font-weight: bold;
+
+    color: #d9b873;
+
+    margin-bottom: 33px;
+}
+
+/* FORM */
+.form-group {
+    width: 100%;
+    height: 45px;
+    margin-bottom: 34px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    height: 100%;
+
+    padding: 0 14px;
+
+    border: none;
+    outline: none;
+    border-radius: 4px;
+
+    background-color: #fff3df;
+
+    color: #633e24;
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+}
+
+.form-group input::placeholder {
+    color: #633e24;
+    opacity: 1;
+}
+
+/* SELECT */
+.form-group select {
+    cursor: pointer;
+}
+
+/* DATE */
+.date-group {
+    display: flex;
+    flex-direction: column;
+
+    background-color: #fff3df;
+    border-radius: 4px;
+
+    padding: 6px 14px;
+}
+
+.date-group label {
+    font-size: 10px;
+    color: #7c695d;
+    margin-bottom: 2px;
+}
+
+.date-group input {
+    height: 20px;
+    padding: 0;
+
+    background: transparent;
+    color: #633e24;
+    font-size: 13px;
+}
+
+/* BUTTONS */
+.form-buttons {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 3px;
+}
+
+.form-buttons button {
+    border: none;
+    cursor: pointer;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+/* CANCEL BUTTON */
+.cancel-btn {
+    padding: 14px;
+    background: transparent;
+    color: #eeeeee;
+}
+
+.cancel-btn:hover {
+    color: #d9b873;
+}
+
+/* SUBMIT BUTTON */
+.submit-btn {
+    width: 131px;
+    height: 42px;
+
+    background-color: #d9b873;
+    color: #603b20;
+
+    border-radius: 4px;
+}
+
+.submit-btn:hover {
+    background-color: #edca8a;
+    transform: translateY(-2px);
+}
+
+/* FOOTER */
+.footer {
+    width: 100%;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 576px) {
+
+    .booking-container {
+        padding: 60px 25px;
+    }
+
+    .booking-content {
+        width: 100%;
+    }
+
+    .booking-title {
+        font-size: 32px;
+    }
+
+    .header {
+        top: 15px;
+        right: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 25px;
+    }
+
+}
+/* ==============================
+   SUCCESS POPUP
+================================ */
+
+.success-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.12);
+}
+
+.success-overlay.active {
+    display: flex;
+}
+
+/* POPUP BOX */
+.success-modal {
+    width: 668px;
+    max-width: 100%;
+    height: 342px;
+
+    position: relative;
+    overflow: hidden;
+
+    background: #d9b873;
+    border-radius: 7px;
+
+    text-align: center;
+
+    animation: popupShow 0.35s ease;
+}
+
+/* CLOSE BUTTON */
+.success-close {
+    position: absolute;
+    top: 13px;
+    right: 20px;
+    z-index: 5;
+
+    border: none;
+    background: transparent;
+
+    color: #63300f;
+    font-size: 36px;
+    font-weight: 300;
+
+    cursor: pointer;
+    line-height: 1;
+}
+
+.success-close:hover {
+    color: #fff3df;
+}
+
+/* LOGO */
+.success-logo {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 80px;
+    height: 100px;
+
+    z-index: 2;
+}
+
+.success-logo svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* TITLE */
+.success-modal h2 {
+    position: absolute;
+    top: 153px;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 2;
+
+    color: #63300f;
+
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* WAVE */
+.success-wave {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 157px;
+
+    z-index: 1;
+}
+
+/* MESSAGE */
+.success-message {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 21px;
+
+    z-index: 2;
+
+    color: #e4c477;
+
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 23px;
+}
+
+/* ANIMATION */
+@keyframes popupShow {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 576px) {
+    .success-modal {
+        height: 320px;
+    }
+
+    .success-logo {
+        top: 25px;
+        width: 70px;
+        height: 90px;
+    }
+
+    .success-modal h2 {
+        top: 140px;
+        font-size: 22px;
+    }
+
+    .success-message {
+        font-size: 11px;
+        line-height: 20px;
+        bottom: 25px;
+    }
+
+    .success-wave {
+        height: 145px;
+    }
+}

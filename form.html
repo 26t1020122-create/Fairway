@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt lịch</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <div class="booking-container">
+
+        <!-- Header -->
+        <div id="header"></div>
+
+        <!-- Booking form -->
+        <main class="booking-content">
+
+            <h1 class="booking-title">Đặt lịch</h1>
+
+            <form id="bookingForm">
+
+                <div class="form-group">
+                    <input
+                        type="text"
+                        id="fullname"
+                        placeholder="Họ tên"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="Số điện thoại"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <select id="room" required>
+                        <option value="" selected disabled>
+                            Loại phòng đặt
+                        </option>
+                        <option value="Phòng Standard">
+                            Phòng Standard
+                        </option>
+                        <option value="Phòng Deluxe">
+                            Phòng Deluxe
+                        </option>
+                        <option value="Phòng VIP">
+                            Phòng VIP
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-group date-group">
+                    <label for="booking-date">Ngày đặt lịch</label>
+                    <input
+                        type="date"
+                        id="booking-date"
+                        value="2021-04-24"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <input
+                        type="time"
+                        id="booking-time"
+                        required
+                    >
+                </div>
+
+                <div class="form-buttons">
+
+                    <button type="reset" class="cancel-btn">
+                        HỦY
+                    </button>
+
+                    <button type="submit" class="submit-btn">
+                        LIÊN HỆ NGAY
+                    </button>
+
+                </div>
+
+            </form>
+
+        </main>
+
+        <!-- Footer -->
+        <div id="footer"></div>
+
+    </div><!-- POPUP ĐĂNG KÝ THÀNH CÔNG -->
+<div class="success-overlay" id="successModal">
+
+    <div class="success-modal">
+
+        <!-- Nút đóng -->
+        <button class="success-close" id="successClose" type="button">
+            &times;
+        </button>
+
+        <!-- Logo -->
+        <div class="success-logo">
+            <svg viewBox="0 0 80 100" xmlns="http://www.w3.org/2000/svg">
+                <g fill="none" stroke="#63300f"
+                   stroke-width="4" stroke-linecap="round"
+                   stroke-linejoin="round">
+
+                    <path d="M34 8 V72 Q34 82 22 86 L12 90"/>
+                    <path d="M40 8 V70 Q40 80 40 87"/>
+                    <path d="M46 8 V72 Q46 82 58 86 L68 90"/>
+                    <path d="M52 25 V70"/>
+                </g>
+
+                <g fill="#63300f">
+                    <path d="M12 90 L8 82 L20 83 L28 77 L30 84 L22 91 Z"/>
+                    <path d="M68 90 L72 82 L60 83 L52 77 L50 84 L58 91 Z"/>
+                    <path d="M28 70 Q40 78 52 70 L52 77 Q40 86 28 77 Z"/>
+                </g>
+            </svg>
+        </div>
+
+        <!-- Tiêu đề -->
+        <h2>ĐĂNG KÝ THÀNH CÔNG</h2>
+
+        <!-- Phần nền sóng -->
+        <svg class="success-wave"
+             viewBox="0 0 668 160"
+             preserveAspectRatio="none"
+             xmlns="http://www.w3.org/2000/svg">
+
+            <path d="M0 55
+                     C100 10 180 0 280 20
+                     C390 45 490 65 668 -20
+                     L668 160 L0 160 Z"
+                  fill="#5c6038"/>
+        </svg>
+
+        <!-- Nội dung -->
+        <div class="success-message">
+            Cảm ơn quý khách đã đăng ký dịch vụ. Đội ngũ của Fairways Golf Lounge
+            <br>
+            sẽ liên hệ với quý khách sau khi nhận được thông tin.
+        </div>
+
+    </div>
+
+</div>
+
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
